@@ -1136,10 +1136,12 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   width: 380px;
   max-width: 90vw;
+  min-height: 630px;
   margin: 1.5rem auto 2.5rem;
   overflow: hidden;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
+  flex-shrink: 0;
 }
 
 .video-header-bar {
@@ -1151,6 +1153,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid var(--c-hairline-light);
   color: var(--c-alabaster);
   flex-shrink: 0;
+  height: 50px;
 }
 
 .video-tag {
@@ -1168,10 +1171,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 580px;
   min-height: 580px;
   background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
 .video-element {
