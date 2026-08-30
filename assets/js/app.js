@@ -172,6 +172,20 @@
           notes: "Yêu Cầu Đặc Biệt & Giờ Đến Dự Kiến",
           submit: "Gửi Yêu Cầu Đặt Phòng"
         },
+        roomOptions: [
+          { value: "", text: "-- Chọn Hạng Phòng & Mức Giá --" },
+          { value: "Phòng Đơn Deluxe (DLX) - 490.000₫/đêm", text: "Phòng Đơn 1 Giường 1m6 · 2 Người (490.000₫/đêm)" },
+          { value: "Phòng Đơn Twin (TWN) - 590.000₫/đêm", text: "Phòng Đơn 2 Giường 1m4 · 2 Người (590.000₫/đêm)" },
+          { value: "Phòng Đôi Gia Đình (SUP) - 690.000₫/đêm", text: "Phòng Đôi 2 Giường 1m6 · 4 Người (690.000₫/đêm)" },
+          { value: "Phòng Đôi Ban Công (DLX) - 720.000₫/đêm", text: "Phòng Đôi 2 Giường 1m6 Ban Công · 4 Người (720.000₫/đêm)" }
+        ],
+        guestOptions: [
+          { value: "1 Khách", text: "1 Khách" },
+          { value: "2 Khách", text: "2 Khách" },
+          { value: "3 Khách", text: "3 Khách" },
+          { value: "4 Khách", text: "4 Khách" },
+          { value: "Gia Đình / Đoàn", text: "Gia Đình / Đoàn Đông" }
+        ],
         placeholders: {
           fullName: "Ví dụ: Nguyễn Văn Ánh",
           contact: "Ví dụ: 0899 668 639 hoặc email@domain.com",
@@ -400,6 +414,20 @@
           notes: "Special Inquiries & Arrival Time",
           submit: "Transmit Reservation Inquiry"
         },
+        roomOptions: [
+          { value: "", text: "-- Select Suite & Rate Preference --" },
+          { value: "Phòng Đơn Deluxe (DLX) - 490.000₫/đêm", text: "Deluxe Single 1 Queen Bed · 2 Guests (490.000₫/night)" },
+          { value: "Phòng Đơn Twin (TWN) - 590.000₫/đêm", text: "Twin Single 2 Beds 1.4m · 2 Guests (590.000₫/night)" },
+          { value: "Phòng Đôi Gia Đình (SUP) - 690.000₫/đêm", text: "Superior Family 2 Queen Beds · 4 Guests (690.000₫/night)" },
+          { value: "Phòng Đôi Ban Công (DLX) - 720.000₫/đêm", text: "Deluxe Balcony 2 Queen Beds · 4 Guests (720.000₫/night)" }
+        ],
+        guestOptions: [
+          { value: "1 Khách", text: "1 Guest" },
+          { value: "2 Khách", text: "2 Guests" },
+          { value: "3 Khách", text: "3 Guests" },
+          { value: "4 Khách", text: "4 Guests" },
+          { value: "Gia Đình / Đoàn", text: "Family / Large Group" }
+        ],
         placeholders: {
           fullName: "e.g. Jean-Luc Dupont",
           contact: "e.g. 0899 668 639 or guest@example.com",
@@ -729,7 +757,7 @@
       if (cl3) cl3.textContent = dict.inquiry.propertyAddress;
     }
 
-    // Form
+    // Form Labels, Select Options & Placeholders
     const lblCheckIn = $("label[for='inquiryCheckIn']");
     if (lblCheckIn) lblCheckIn.textContent = dict.inquiry.labels.checkIn;
 
@@ -739,17 +767,52 @@
     const lblRoomSelect = $("label[for='inquiryRoomSelect']");
     if (lblRoomSelect) lblRoomSelect.textContent = dict.inquiry.labels.suitePref;
 
+    const roomSelect = $("#inquiryRoomSelect");
+    if (roomSelect && dict.inquiry.roomOptions) {
+      const curVal = roomSelect.value;
+      roomSelect.innerHTML = "";
+      dict.inquiry.roomOptions.forEach(function (opt) {
+        const optEl = document.createElement("option");
+        optEl.value = opt.value;
+        optEl.textContent = opt.text;
+        if (opt.value === curVal) optEl.selected = true;
+        roomSelect.appendChild(optEl);
+      });
+    }
+
     const lblGuests = $("label[for='inquiryGuests']");
     if (lblGuests) lblGuests.textContent = dict.inquiry.labels.guests;
+
+    const guestsSelect = $("#inquiryGuests");
+    if (guestsSelect && dict.inquiry.guestOptions) {
+      const curGuestVal = guestsSelect.value;
+      guestsSelect.innerHTML = "";
+      dict.inquiry.guestOptions.forEach(function (opt, i) {
+        const optEl = document.createElement("option");
+        optEl.value = opt.value;
+        optEl.textContent = opt.text;
+        if (opt.value === curGuestVal || (i === 1 && !curGuestVal)) optEl.selected = true;
+        guestsSelect.appendChild(optEl);
+      });
+    }
 
     const lblName = $("label[for='inquiryName']");
     if (lblName) lblName.textContent = dict.inquiry.labels.fullName;
 
+    const nameInput = $("#inquiryName");
+    if (nameInput) nameInput.placeholder = dict.inquiry.placeholders.fullName;
+
     const lblContact = $("label[for='inquiryContact']");
     if (lblContact) lblContact.textContent = dict.inquiry.labels.contact;
 
+    const contactInput = $("#inquiryContact");
+    if (contactInput) contactInput.placeholder = dict.inquiry.placeholders.contact;
+
     const lblNotes = $("label[for='inquiryNotes']");
     if (lblNotes) lblNotes.textContent = dict.inquiry.labels.notes;
+
+    const notesInput = $("#inquiryNotes");
+    if (notesInput) notesInput.placeholder = dict.inquiry.placeholders.notes;
 
     const submitBtn = $("#inquirySubmitBtn");
     if (submitBtn) submitBtn.textContent = dict.inquiry.labels.submit;
@@ -886,8 +949,12 @@
   }
 
   function openCategoryModal(categoryId) {
-    if (!window.HOTEL_DATA) return;
-    const cat = window.HOTEL_DATA.getCategory(categoryId);
+    const data = window.HOTEL_DATA || (typeof globalThis !== "undefined" ? globalThis.HOTEL_DATA : null);
+    if (!data) {
+      console.warn("HOTEL_DATA not initialized");
+      return;
+    }
+    const cat = data.getCategory(categoryId);
     if (!cat) return;
 
     APP_STATE.activeCategory = categoryId;
@@ -944,10 +1011,7 @@
       cat.roomKeys.forEach(function (key) {
         const tab = document.createElement("button");
         tab.className = "room-selector-tab";
-        tab.textContent = "Phòng " + key + (key === "P.207" ? " (Video)" : "");
-        if (APP_STATE.currentLang === "en") {
-          tab.textContent = "Suite " + key + (key === "P.207" ? " (Video)" : "");
-        }
+        tab.textContent = (APP_STATE.currentLang === "en" ? "Suite " : "Phòng ") + key + (key === "P.207" ? " (Video)" : "");
         tab.addEventListener("click", function () {
           $$(".room-selector-tab", keysStrip).forEach(function (t) { t.classList.remove("active"); });
           this.classList.add("active");
@@ -968,6 +1032,9 @@
   }
 
   function renderCategoryModalPhotos(categoryId) {
+    const data = window.HOTEL_DATA || (typeof globalThis !== "undefined" ? globalThis.HOTEL_DATA : null);
+    if (!data) return;
+
     const videoStage = $("#modalVideoStage");
     const videoPlayer = $("#modalVideoPlayer");
     if (videoStage) {
@@ -988,7 +1055,7 @@
     if (!grid) return;
     grid.innerHTML = "";
 
-    const rooms = window.HOTEL_DATA.getRoomsByCategory(categoryId);
+    const rooms = data.getRoomsByCategory(categoryId);
     const allPhotos = [];
     rooms.forEach(function (r) {
       r.photos.forEach(function (p) {
@@ -1002,10 +1069,13 @@
     }
 
     allPhotos.forEach(function (photo) {
+      const isEn = APP_STATE.currentLang === "en";
+      const altText = (isEn ? "Suite " : "Phòng ") + photo.roomKey + (isEn ? " — Interior & View" : " — Không Gian Phòng");
+      const overlayText = (isEn ? "Suite " : "Phòng ") + photo.roomKey;
       const item = document.createElement("div");
       item.className = "modal-photo-item";
-      item.innerHTML = "<img src='" + photo.src + "' alt='" + photo.roomKey + "' loading='lazy'>" +
-        "<div class='modal-photo-overlay'>" + photo.roomKey + "</div>";
+      item.innerHTML = "<img src='" + photo.src + "' alt='" + altText + "' loading='lazy'>" +
+        "<div class='modal-photo-overlay'>" + overlayText + "</div>";
       grid.appendChild(item);
     });
   }
@@ -1031,7 +1101,10 @@
     if (!grid) return;
     grid.innerHTML = "";
 
-    const room = window.HOTEL_DATA.getRoom(roomKey);
+    const data = window.HOTEL_DATA || (typeof globalThis !== "undefined" ? globalThis.HOTEL_DATA : null);
+    if (!data) return;
+
+    const room = data.getRoom(roomKey);
     if (!room) return;
 
     if (countEl) {
@@ -1040,10 +1113,13 @@
     }
 
     room.photos.forEach(function (photo, idx) {
+      const isEn = APP_STATE.currentLang === "en";
+      const altText = (isEn ? "Suite " : "Phòng ") + room.key + (isEn ? " — Photo " : " — Ảnh ") + (idx + 1);
+      const overlayText = (isEn ? "Suite " : "Phòng ") + room.key + (isEn ? " — Photo " : " — Ảnh ") + (idx + 1);
       const item = document.createElement("div");
       item.className = "modal-photo-item";
-      item.innerHTML = "<img src='" + photo.src + "' alt='" + room.key + "' loading='lazy'>" +
-        "<div class='modal-photo-overlay'>" + room.key + " - Ảnh " + (idx + 1) + "</div>";
+      item.innerHTML = "<img src='" + photo.src + "' alt='" + altText + "' loading='lazy'>" +
+        "<div class='modal-photo-overlay'>" + overlayText + "</div>";
       grid.appendChild(item);
     });
   }

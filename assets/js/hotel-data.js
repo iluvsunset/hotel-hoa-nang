@@ -9,12 +9,15 @@
  */
 
 (function (root, factory) {
-  if (typeof define === "function" && define.amd) {
-    define([], factory);
-  } else if (typeof module === "object" && module.exports) {
-    module.exports = factory();
-  } else {
-    root.HOTEL_DATA = factory();
+  const data = factory();
+  if (typeof window !== "undefined") {
+    window.HOTEL_DATA = data;
+  }
+  if (typeof globalThis !== "undefined") {
+    globalThis.HOTEL_DATA = data;
+  }
+  if (typeof module === "object" && module.exports) {
+    module.exports = data;
   }
 })(typeof self !== "undefined" ? self : this, function () {
   "use strict";
