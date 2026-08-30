@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://hotelhoanang.com/</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en" />
+    <image:image>
+      <image:loc>https://hotelhoanang.com/Ảnh%20Khách%20Sạn/z5987786268678_9a4b5460e6b239a79c76d0719ca27a68.jpg</image:loc>
+      <image:title>Khách Sạn Hoa Nắng Bảo Lộc Mặt Tiền Sang Trọng</image:title>
+      <image:caption>Khách sạn nghỉ dưỡng cao cấp tại Bảo Lộc Lâm Đồng</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Rooms & Suites Section -->
+  <url>
+    <loc>https://hotelhoanang.com/#rooms</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Amenities & Buffet Breakfast Section -->
+  <url>
+    <loc>https://hotelhoanang.com/#amenities</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- House Rules & Stay Policies -->
+  <url>
+    <loc>https://hotelhoanang.com/#policies</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Photo Gallery -->
+  <url>
+    <loc>https://hotelhoanang.com/#gallery</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Direct Booking -->
+  <url>
+    <loc>https://hotelhoanang.com/#booking</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Location & Google Maps -->
+  <url>
+    <loc>https://hotelhoanang.com/#location</loc>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,231 @@
+{
+  "project": "Hotel Hoa Nắng Luxury Website",
+  "version": "1.0.0",
+  "tiers": {
+    "tier_1_feature_coverage": {
+      "name": "Tier 1: Feature Coverage (>=5 per feature for F01-F15)",
+      "target_tests": 75,
+      "features": {
+        "F01_design_tokens": [
+          {"id": "T1.F01.01", "name": "Verify Alabaster canvas token #FDFBF7 in CSS root variables"},
+          {"id": "T1.F01.02", "name": "Verify Natural Linen surface token #F5F0EB in CSS root variables"},
+          {"id": "T1.F01.03", "name": "Verify Charcoal Obsidian text token #141414 in CSS root variables"},
+          {"id": "T1.F01.04", "name": "Verify Champagne Bronze accent token #A38954 in CSS root variables"},
+          {"id": "T1.F01.05", "name": "Verify Stone Hairline border token #E5DFD5 and Google Fonts link"}
+        ],
+        "F02_zero_icons": [
+          {"id": "T1.F02.01", "name": "Verify navigation buttons use pure uppercase typographic text"},
+          {"id": "T1.F02.02", "name": "Verify modal close triggers use typographic brackets [ CLOSE ]"},
+          {"id": "T1.F02.03", "name": "Verify gallery navigation uses pure text [ PREV ] and [ NEXT ]"},
+          {"id": "T1.F02.04", "name": "Verify video controls use text badges [ PLAY ] and [ PAUSE ]"},
+          {"id": "T1.F02.05", "name": "Verify amenity cards use structured text labels without icon glyphs"}
+        ],
+        "F03_media_catalog": [
+          {"id": "T1.F03.01", "name": "Verify property metadata in HOTEL_DATA (name, address, phone, email)"},
+          {"id": "T1.F03.02", "name": "Verify 4 suite categories defined in data catalog"},
+          {"id": "T1.F03.03", "name": "Verify all 21 room keys (P.001 to P.304) indexed with photo arrays"},
+          {"id": "T1.F03.04", "name": "Verify 95 gallery photos cataloged with categories"},
+          {"id": "T1.F03.05", "name": "Verify 8 factual amenities cataloged with detailed descriptors"}
+        ],
+        "F04_master_layout": [
+          {"id": "T1.F04.01", "name": "Verify semantic HTML5 landmark tags (header, main, section, footer)"},
+          {"id": "T1.F04.02", "name": "Verify Hero section elements (display title, subtitle, CTA)"},
+          {"id": "T1.F04.03", "name": "Verify Curated Accommodations section container and 4 cards"},
+          {"id": "T1.F04.04", "name": "Verify Hotel Gallery section container, tabs, and masonry grid"},
+          {"id": "T1.F04.05", "name": "Verify Editorial Footer with verified address and direct contact links"}
+        ],
+        "F05_suite_categories": [
+          {"id": "T1.F05.01", "name": "Verify The Balcony Suites category definition and room keys (P.206, P.207, P.301, P.302)"},
+          {"id": "T1.F05.02", "name": "Verify The Deluxe King Sanctuaries category definition and room keys (P.101, P.102, P.201, P.202, P.303, P.304)"},
+          {"id": "T1.F05.03", "name": "Verify The Superior Double & Twin Rooms definition (P.103-P.106, P.203-P.205)"},
+          {"id": "T1.F05.04", "name": "Verify The Ground Level Suites category definition (P.001-P.004)"},
+          {"id": "T1.F05.05", "name": "Verify category cards render titles, subtitles, and [ EXPLORE SUITES ] triggers"}
+        ],
+        "F06_room_drawer_modal": [
+          {"id": "T1.F06.01", "name": "Verify room modal DOM elements (#room-modal, drawer container, backdrop)"},
+          {"id": "T1.F06.02", "name": "Verify room-key tab selector bar rendered inside modal"},
+          {"id": "T1.F06.03", "name": "Verify dynamic photo gallery container in room modal"},
+          {"id": "T1.F06.04", "name": "Verify direct [ INQUIRE FOR THIS ROOM ] CTA in room drawer"},
+          {"id": "T1.F06.05", "name": "Verify modal dismissal via [ CLOSE ] button and backdrop click"}
+        ],
+        "F07_room_p207_video": [
+          {"id": "T1.F07.01", "name": "Verify HTML5 video element markup for Room P.207"},
+          {"id": "T1.F07.02", "name": "Verify video source path resolves to clip quay phòng có ban công.mp4"},
+          {"id": "T1.F07.03", "name": "Verify video attributes include playsinline and preload"},
+          {"id": "T1.F07.04", "name": "Verify custom typographic video control badges [ PLAY ] / [ PAUSE ]"},
+          {"id": "T1.F07.05", "name": "Verify video poster fallback image from P.207 archive"}
+        ],
+        "F08_hotel_gallery": [
+          {"id": "T1.F08.01", "name": "Verify gallery container #gallery-grid contains 95 image cards"},
+          {"id": "T1.F08.02", "name": "Verify gallery category filter tabs (All, Exterior, Lobby, Suites, Details)"},
+          {"id": "T1.F08.03", "name": "Verify filter tab interaction changes active class"},
+          {"id": "T1.F08.04", "name": "Verify images use lazy loading and valid alt attributes"},
+          {"id": "T1.F08.05", "name": "Verify gallery cards trigger fullscreen lightbox on click"}
+        ],
+        "F09_fullscreen_lightbox": [
+          {"id": "T1.F09.01", "name": "Verify lightbox modal container (#lightbox-modal) with dark backdrop"},
+          {"id": "T1.F09.02", "name": "Verify lightbox displays current high-res image and title"},
+          {"id": "T1.F09.03", "name": "Verify [ NEXT ] button advances to subsequent image"},
+          {"id": "T1.F09.04", "name": "Verify [ PREV ] button returns to preceding image"},
+          {"id": "T1.F09.05", "name": "Verify [ CLOSE ] button and Escape key dismiss lightbox"}
+        ],
+        "F10_factual_amenities": [
+          {"id": "T1.F10.01", "name": "Verify 8 factual amenities present in DOM (#amenities-grid)"},
+          {"id": "T1.F10.02", "name": "Verify Air Conditioning, Wi-Fi, Private Bath, Elevator features"},
+          {"id": "T1.F10.03", "name": "Verify Sun Balconies, 24/7 Front Desk, Housekeeping, Parking features"},
+          {"id": "T1.F10.04", "name": "Verify structured 2-column or 4-column typographic layout"},
+          {"id": "T1.F10.05", "name": "Verify zero decorative icon glyphs across amenities"}
+        ],
+        "F11_booking_inquiry_modal": [
+          {"id": "T1.F11.01", "name": "Verify reservation modal container (#inquiry-modal) in DOM"},
+          {"id": "T1.F11.02", "name": "Verify form input fields (check-in, check-out, room, guests, name, contact)"},
+          {"id": "T1.F11.03", "name": "Verify room selector dropdown contains all 4 categories and 21 rooms"},
+          {"id": "T1.F11.04", "name": "Verify client-side validation triggers on incomplete fields"},
+          {"id": "T1.F11.05", "name": "Verify valid submission renders Inquiry Summary Drawer with HN-INQ code"}
+        ],
+        "F12_direct_contact": [
+          {"id": "T1.F12.01", "name": "Verify telephone hotline link format (tel:...)"},
+          {"id": "T1.F12.02", "name": "Verify Zalo / WhatsApp direct link format"},
+          {"id": "T1.F12.03", "name": "Verify email link format (mailto:...)"},
+          {"id": "T1.F12.04", "name": "Verify verified physical address in Bảo Lộc, Lâm Đồng"},
+          {"id": "T1.F12.05", "name": "Verify location map link or directions modal trigger"}
+        ],
+        "F13_responsive_layout": [
+          {"id": "T1.F13.01", "name": "Verify viewport meta tag configured for responsive scaling"},
+          {"id": "T1.F13.02", "name": "Verify mobile media query (max-width: 768px) in CSS"},
+          {"id": "T1.F13.03", "name": "Verify tablet media query (769px - 1024px) in CSS"},
+          {"id": "T1.F13.04", "name": "Verify desktop max-width constraints (1440px) in CSS"},
+          {"id": "T1.F13.05", "name": "Verify mobile navigation drawer mechanism for small screens"}
+        ],
+        "F14_asset_uri_resolution": [
+          {"id": "T1.F14.01", "name": "Verify all 21 room directory paths exist on disk"},
+          {"id": "T1.F14.02", "name": "Verify all 71 room photos exist on disk and are readable"},
+          {"id": "T1.F14.03", "name": "Verify P.207 video file exists and is non-empty"},
+          {"id": "T1.F14.04", "name": "Verify all 95 gallery photos in Ảnh Khách Sạn/ exist on disk"},
+          {"id": "T1.F14.05", "name": "Verify URL percent-encoding for all Vietnamese diacritic paths"}
+        ],
+        "F15_e2e_harness": [
+          {"id": "T1.F15.01", "name": "Verify autonomous test runner executes cleanly in Python 3"},
+          {"id": "T1.F15.02", "name": "Verify runner reports pass/fail counts per tier"},
+          {"id": "T1.F15.03", "name": "Verify runner returns exit code 0 on success and >0 on failure"},
+          {"id": "T1.F15.04", "name": "Verify JSON execution report generation support"},
+          {"id": "T1.F15.05", "name": "Verify standalone ephemeral HTTP server testing support"}
+        ]
+      }
+    },
+    "tier_2_boundary_cases": {
+      "name": "Tier 2: Boundary & Corner Cases (>=5 per feature)",
+      "target_tests": 75,
+      "cases": [
+        {"id": "T2.01", "feature": "F11", "name": "Minimum 1-night stay boundary (check-in today, check-out tomorrow)"},
+        {"id": "T2.02", "feature": "F11", "name": "Check-out earlier than check-in rejected with typographic error"},
+        {"id": "T2.03", "feature": "F11", "name": "Check-in and check-out on identical same day rejected"},
+        {"id": "T2.04", "feature": "F11", "name": "Long-range booking 365 days in advance accepted"},
+        {"id": "T2.05", "feature": "F11", "name": "Leap year date handling (Feb 28/29)"},
+        {"id": "T2.06", "feature": "F09", "name": "Lightbox circular boundary wrap: index 0 PREV -> index 94"},
+        {"id": "T2.07", "feature": "F09", "name": "Lightbox circular boundary wrap: index 94 NEXT -> index 0"},
+        {"id": "T2.08", "feature": "F11", "name": "Empty special requests field accepted as optional"},
+        {"id": "T2.09", "feature": "F11", "name": "Guest name with Vietnamese diacritics and hyphens accepted"},
+        {"id": "T2.10", "feature": "F11", "name": "Single-character guest name rejected by validator"},
+        {"id": "T2.11", "feature": "F11", "name": "International phone numbers (+84, +1, spaces, dashes) accepted"},
+        {"id": "T2.12", "feature": "F11", "name": "Malformed phone and email input rejected with inline alert"},
+        {"id": "T2.13", "feature": "F06", "name": "Room photo count reflow (3 photos in P.001 vs 4 photos in P.002)"},
+        {"id": "T2.14", "feature": "F13", "name": "Ultra-narrow viewport 320px rendering without horizontal scroll"},
+        {"id": "T2.15", "feature": "F13", "name": "Tablet 768px viewport grid reflow to 2-column"},
+        {"id": "T2.16", "feature": "F13", "name": "Desktop 1440px max-width boundary constraint"},
+        {"id": "T2.17", "feature": "F13", "name": "Ultra-wide 2560px 4K monitor canvas centering"},
+        {"id": "T2.18", "feature": "F08", "name": "Rapid consecutive filter tab clicks maintain DOM consistency"},
+        {"id": "T2.19", "feature": "F07", "name": "Video player muted and playsinline attributes for autoplay compatibility"},
+        {"id": "T2.20", "feature": "F06", "name": "Escape key closes active Room Drawer modal and restores body scroll"},
+        {"id": "T2.21", "feature": "F09", "name": "Escape key closes active Lightbox and restores body scroll"},
+        {"id": "T2.22", "feature": "F11", "name": "Escape key closes active Reservation Modal and restores body scroll"},
+        {"id": "T2.23", "feature": "F01", "name": "Color contrast ratio for primary text exceeds WCAG AAA (18.2:1)"},
+        {"id": "T2.24", "feature": "F01", "name": "Color contrast ratio for body muted text exceeds WCAG AAA (8.9:1)"},
+        {"id": "T2.25", "feature": "F01", "name": "Color contrast ratio for bronze accents meets AA standards"},
+        {"id": "T2.26", "feature": "F02", "name": "Modal header close trigger renders uppercase bracket text"},
+        {"id": "T2.27", "feature": "F02", "name": "Image viewer navigation controls contain 0 SVG tags"},
+        {"id": "T2.28", "feature": "F02", "name": "Header reservation trigger is pure typographic button"},
+        {"id": "T2.29", "feature": "F02", "name": "Footer social/contact channel triggers use text labels"},
+        {"id": "T2.30", "feature": "F02", "name": "Filter tab badges display text count // 95"},
+        {"id": "T2.31", "feature": "F03", "name": "All 21 room keys have non-empty photo lists"},
+        {"id": "T2.32", "feature": "F03", "name": "Room keys follow strict pattern P.001-P.304"},
+        {"id": "T2.33", "feature": "F03", "name": "Category assignments for all 21 rooms are valid"},
+        {"id": "T2.34", "feature": "F03", "name": "Floor assignment corresponds with room number leading digit"},
+        {"id": "T2.35", "feature": "F03", "name": "Gallery items index consecutive unique IDs 1-95"},
+        {"id": "T2.36", "feature": "F04", "name": "Header brand name Hotel Hoa Nắng is prominently rendered"},
+        {"id": "T2.37", "feature": "F04", "name": "Hero background image or subtle styling loads cleanly"},
+        {"id": "T2.38", "feature": "F04", "name": "Location section provides complete street address in B'Lao Bảo Lộc"},
+        {"id": "T2.39", "feature": "F04", "name": "Header navigation links resolve to valid section IDs"},
+        {"id": "T2.40", "feature": "F04", "name": "Document title contains Hotel Hoa Nắng and luxury tagline"},
+        {"id": "T2.41", "feature": "F05", "name": "Balcony category contains exactly 4 rooms"},
+        {"id": "T2.42", "feature": "F05", "name": "Deluxe King category contains exactly 6 rooms"},
+        {"id": "T2.43", "feature": "F05", "name": "Superior Twin/Double category contains exactly 7 rooms"},
+        {"id": "T2.44", "feature": "F05", "name": "Ground Level category contains exactly 4 rooms"},
+        {"id": "T2.45", "feature": "F05", "name": "Sum of rooms across 4 categories equals exactly 21"},
+        {"id": "T2.46", "feature": "F06", "name": "Switching from P.206 to P.207 activates video player"},
+        {"id": "T2.47", "feature": "F06", "name": "Switching from P.207 to P.301 hides video player"},
+        {"id": "T2.48", "feature": "F06", "name": "Selecting ALL ROOMS tab shows all photos for category"},
+        {"id": "T2.49", "feature": "F06", "name": "Modal backdrop click triggers dismiss"},
+        {"id": "T2.50", "feature": "F06", "name": "Modal lock scroll prevents background window scroll"},
+        {"id": "T2.51", "feature": "F07", "name": "P.207 video element has valid source attribute"},
+        {"id": "T2.52", "feature": "F07", "name": "P.207 video custom play button toggles playback state"},
+        {"id": "T2.53", "feature": "F07", "name": "P.207 video custom sound button toggles muted state"},
+        {"id": "T2.54", "feature": "F07", "name": "P.207 video element has controls or custom typographic badges"},
+        {"id": "T2.55", "feature": "F07", "name": "P.207 video file size is greater than 1MB"},
+        {"id": "T2.56", "feature": "F08", "name": "Exterior filter shows only exterior photos"},
+        {"id": "T2.57", "feature": "F08", "name": "Lobby filter shows only lobby photos"},
+        {"id": "T2.58", "feature": "F08", "name": "Suites filter shows only suites photos"},
+        {"id": "T2.59", "feature": "F08", "name": "Details filter shows only details photos"},
+        {"id": "T2.60", "feature": "F08", "name": "All filter restores full 95 photo set"},
+        {"id": "T2.61", "feature": "F09", "name": "Left Arrow key navigates to previous image in lightbox"},
+        {"id": "T2.62", "feature": "F09", "name": "Right Arrow key navigates to next image in lightbox"},
+        {"id": "T2.63", "feature": "F09", "name": "Lightbox counter format matches ARCHIVE XX OF 95"},
+        {"id": "T2.64", "feature": "F09", "name": "Lightbox image changes src smoothly without broken state"},
+        {"id": "T2.65", "feature": "F09", "name": "Backdrop click closes lightbox"},
+        {"id": "T2.66", "feature": "F10", "name": "Amenity 1: Air Conditioning is explicitly listed"},
+        {"id": "T2.67", "feature": "F10", "name": "Amenity 2: High-speed Wi-Fi is explicitly listed"},
+        {"id": "T2.68", "feature": "F10", "name": "Amenity 3: En-suite private bathroom is explicitly listed"},
+        {"id": "T2.69", "feature": "F10", "name": "Amenity 4: Passenger elevator is explicitly listed"},
+        {"id": "T2.70", "feature": "F10", "name": "Amenity 5-8: Balconies, 24/7 Desk, Housekeeping, Parking listed"},
+        {"id": "T2.71", "feature": "F12", "name": "Telephone number string contains valid digits"},
+        {"id": "T2.72", "feature": "F12", "name": "Email address format contains @ and valid domain"},
+        {"id": "T2.73", "feature": "F12", "name": "Zalo link contains valid protocol and username"},
+        {"id": "T2.74", "feature": "F14", "name": "Filenames with spaces properly resolved (%20)"},
+        {"id": "T2.75", "feature": "F14", "name": "Filenames with Vietnamese characters properly resolved"}
+      ]
+    },
+    "tier_3_combinatorial": {
+      "name": "Tier 3: Pairwise Combinatorial Testing",
+      "target_tests": 48,
+      "categories_rooms_matrix": 21,
+      "form_permutations": 16,
+      "filter_lightbox_combinations": 11
+    },
+    "tier_4_user_journeys": {
+      "name": "Tier 4: Real-World Workloads & High-Fidelity User Journeys",
+      "target_tests": 4,
+      "journeys": [
+        {"id": "T4.01", "name": "The Luxury Balcony Suite Explorer (Hero -> Category 1 -> Room P.207 -> Video -> Inquire Handshake -> Summary)"},
+        {"id": "T4.02", "name": "The Architectural Gallery Connoisseur (Header Gallery -> Filter Exterior -> Lightbox Open -> Keyboard Cycle -> Escape)"},
+        {"id": "T4.03", "name": "The Direct Booking Traveler (Reserve CTA -> Select Deluxe King -> Enter Guest Data -> Form Validation -> HN-INQ Confirmation)"},
+        {"id": "T4.04", "name": "The Ground Level Accessible Guest (Explore Level 0 -> Verify Step-Free & Elevator -> Trigger Direct Telephone Call)"}
+      ]
+    },
+    "tier_5_adversarial_invariants": {
+      "name": "Tier 5: Adversarial Invariants & Deep Compliance Auditing",
+      "target_tests": 36,
+      "invariants": [
+        {"id": "T5.01", "name": "Zero SVG tags (<svg) in index.html, luxury-theme.css, hotel-data.js, app.js"},
+        {"id": "T5.02", "name": "Zero icon class tokens (fa-, lucide-, heroicon-, material-icons, glyphicon)"},
+        {"id": "T5.03", "name": "Zero font-icon stylesheet imports or CDNs"},
+        {"id": "T5.04", "name": "Zero Unicode Emoji codepoints across all source files"},
+        {"id": "T5.05", "name": "Zero simulated rating stars or fake review scores"},
+        {"id": "T5.06", "name": "Zero simulated terminal/bash command prompts"},
+        {"id": "T5.07", "name": "100% on-disk file existence for all 167 media assets"},
+        {"id": "T5.08", "name": "100% HTTP 200 resolution over ephemeral local HTTP server with URL encoding"},
+        {"id": "T5.09", "name": "Global CSS overflow-x prevention and box-sizing border-box enforcement"},
+        {"id": "T5.10", "name": "Editorial color palette compliance across all CSS rules"}
+      ]
+    }
+  }
+}

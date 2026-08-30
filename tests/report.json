@@ -1,0 +1,1521 @@
+{
+  "project": "Hotel Hoa Nắng Luxury Website",
+  "timestamp": "2026-08-29T16:24:00Z",
+  "total": 168,
+  "passed": 168,
+  "failed": 0,
+  "tests": [
+    {
+      "id": "T1.F01.01",
+      "name": "Alabaster canvas token (#FDFBF7) defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F01.02",
+      "name": "Natural Linen surface token (#F5F0EB) defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F01.03",
+      "name": "Charcoal Obsidian text token (#141414) defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F01.04",
+      "name": "Champagne Bronze accent token (#A38954) defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F01.05",
+      "name": "Stone Hairline token (#E5DFD5) & Google Fonts typography imported",
+      "tier": "Tier 1",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F02.01",
+      "name": "Navigation controls use pure uppercase typographic text",
+      "tier": "Tier 1",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F02.02",
+      "name": "Modal close triggers use typographic labels [ CLOSE ]",
+      "tier": "Tier 1",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.18
+    },
+    {
+      "id": "T1.F02.03",
+      "name": "Gallery navigation controls use pure text [ PREV ] and [ NEXT ]",
+      "tier": "Tier 1",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.15
+    },
+    {
+      "id": "T1.F02.04",
+      "name": "Video controls use pure text badges e.g. [ PLAY VIDEO ]",
+      "tier": "Tier 1",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T1.F02.05",
+      "name": "Amenity cards use structured text labels without icon glyphs",
+      "tier": "Tier 1",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T1.F03.01",
+      "name": "Property metadata in hotel-data.js (name, address in Bảo Lộc)",
+      "tier": "Tier 1",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F03.02",
+      "name": "All 4 suite categories defined in hotel-data.js",
+      "tier": "Tier 1",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F03.03",
+      "name": "All 21 room keys (P.001 to P.304) cataloged in hotel-data.js",
+      "tier": "Tier 1",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.06
+    },
+    {
+      "id": "T1.F03.04",
+      "name": "Gallery photos cataloged with categories in hotel-data.js",
+      "tier": "Tier 1",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.05
+    },
+    {
+      "id": "T1.F03.05",
+      "name": "Factual amenities cataloged with descriptors in hotel-data.js",
+      "tier": "Tier 1",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.26
+    },
+    {
+      "id": "T1.F04.01",
+      "name": "Semantic HTML5 landmark tags (header, section/main, footer)",
+      "tier": "Tier 1",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F04.02",
+      "name": "Hero section renders title and luxury editorial headline",
+      "tier": "Tier 1",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T1.F04.03",
+      "name": "Accommodations section container present in DOM",
+      "tier": "Tier 1",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T1.F04.04",
+      "name": "Hotel Gallery section container present in DOM",
+      "tier": "Tier 1",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T1.F04.05",
+      "name": "Editorial Footer renders verified address & contact links",
+      "tier": "Tier 1",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.07
+    },
+    {
+      "id": "T1.F05.01",
+      "name": "Category 1: The Balcony Suites defined and mapped",
+      "tier": "Tier 1",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F05.02",
+      "name": "Category 2: The Deluxe King Sanctuaries defined and mapped",
+      "tier": "Tier 1",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F05.03",
+      "name": "Category 3: The Superior Double & Twin Rooms defined and mapped",
+      "tier": "Tier 1",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F05.04",
+      "name": "Category 4: The Ground Level Suites defined and mapped",
+      "tier": "Tier 1",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F05.05",
+      "name": "Suite category cards render titles and exploration triggers",
+      "tier": "Tier 1",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T1.F06.01",
+      "name": "Room modal drawer container present in DOM",
+      "tier": "Tier 1",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F06.02",
+      "name": "Room key selector logic configured for P.001 - P.304",
+      "tier": "Tier 1",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F06.03",
+      "name": "Dynamic photo gallery container in room modal configured",
+      "tier": "Tier 1",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.15
+    },
+    {
+      "id": "T1.F06.04",
+      "name": "Direct [ INQUIRE FOR THIS ROOM ] CTA present in room modal",
+      "tier": "Tier 1",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T1.F06.05",
+      "name": "Room modal dismissible via close trigger or backdrop click",
+      "tier": "Tier 1",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T1.F07.01",
+      "name": "HTML5 video element markup configured for Room P.207",
+      "tier": "Tier 1",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T1.F07.02",
+      "name": "Video source path resolves to clip quay phòng có ban công.mp4",
+      "tier": "Tier 1",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.04
+    },
+    {
+      "id": "T1.F07.03",
+      "name": "Video element includes playsinline / preload attributes",
+      "tier": "Tier 1",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F07.04",
+      "name": "Typographic video controls [ PLAY ] / [ PAUSE ] configured",
+      "tier": "Tier 1",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.06
+    },
+    {
+      "id": "T1.F07.05",
+      "name": "P.207 video file exists on disk and is non-empty (>100KB)",
+      "tier": "Tier 1",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T1.F08.01",
+      "name": "Gallery masonry container present in DOM",
+      "tier": "Tier 1",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.1
+    },
+    {
+      "id": "T1.F08.02",
+      "name": "Gallery category filter tabs (All, Exterior, Lobby, Suites, Details)",
+      "tier": "Tier 1",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.16
+    },
+    {
+      "id": "T1.F08.03",
+      "name": "Filter tab interaction updates active styling",
+      "tier": "Tier 1",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.14
+    },
+    {
+      "id": "T1.F08.04",
+      "name": "Gallery images configured with lazy loading",
+      "tier": "Tier 1",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F08.05",
+      "name": "Gallery image click connects to fullscreen lightbox",
+      "tier": "Tier 1",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.24
+    },
+    {
+      "id": "T1.F09.01",
+      "name": "Lightbox modal container present in DOM / app.js",
+      "tier": "Tier 1",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.1
+    },
+    {
+      "id": "T1.F09.02",
+      "name": "Lightbox renders image counter (e.g. ARCHIVE XX OF 95)",
+      "tier": "Tier 1",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T1.F09.03",
+      "name": "Lightbox [ NEXT ] navigation button configured",
+      "tier": "Tier 1",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.15
+    },
+    {
+      "id": "T1.F09.04",
+      "name": "Lightbox [ PREV ] navigation button configured",
+      "tier": "Tier 1",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.14
+    },
+    {
+      "id": "T1.F09.05",
+      "name": "Lightbox dismissible via [ CLOSE ] trigger or Escape key",
+      "tier": "Tier 1",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.07
+    },
+    {
+      "id": "T1.F10.01",
+      "name": "Amenities grid section present in DOM",
+      "tier": "Tier 1",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T1.F10.02",
+      "name": "Air Conditioning and High-Speed Wi-Fi amenities listed",
+      "tier": "Tier 1",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.42
+    },
+    {
+      "id": "T1.F10.03",
+      "name": "Private Bathroom and Passenger Elevator amenities listed",
+      "tier": "Tier 1",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.36
+    },
+    {
+      "id": "T1.F10.04",
+      "name": "Front Desk, Housekeeping, and Parking amenities listed",
+      "tier": "Tier 1",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.35
+    },
+    {
+      "id": "T1.F10.05",
+      "name": "Structured 2/4-column typographic layout styling defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.11
+    },
+    {
+      "id": "T1.F11.01",
+      "name": "Reservation inquiry modal container present in DOM",
+      "tier": "Tier 1",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T1.F11.02",
+      "name": "Check-In and Check-Out date input fields configured",
+      "tier": "Tier 1",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.48
+    },
+    {
+      "id": "T1.F11.03",
+      "name": "Room preference selector configured with category options",
+      "tier": "Tier 1",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.28
+    },
+    {
+      "id": "T1.F11.04",
+      "name": "Guest Name and Contact input fields configured",
+      "tier": "Tier 1",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.54
+    },
+    {
+      "id": "T1.F11.05",
+      "name": "Inquiry Confirmation summary generation configured",
+      "tier": "Tier 1",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T1.F12.01",
+      "name": "Telephone hotline link (tel:...) configured",
+      "tier": "Tier 1",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F12.02",
+      "name": "Zalo / WhatsApp direct contact link configured",
+      "tier": "Tier 1",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T1.F12.03",
+      "name": "Direct email channel configured",
+      "tier": "Tier 1",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T1.F12.04",
+      "name": "Verified physical address in Bảo Lộc, Lâm Đồng configured",
+      "tier": "Tier 1",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F12.05",
+      "name": "Location map / directions link configured",
+      "tier": "Tier 1",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.85
+    },
+    {
+      "id": "T1.F13.01",
+      "name": "Viewport meta tag configured for responsive scaling",
+      "tier": "Tier 1",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F13.02",
+      "name": "Mobile media query (max-width: 768px) defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.05
+    },
+    {
+      "id": "T1.F13.03",
+      "name": "Tablet media query defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T1.F13.04",
+      "name": "Desktop container max-width constraint defined in CSS",
+      "tier": "Tier 1",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F13.05",
+      "name": "Mobile navigation menu mechanism configured",
+      "tier": "Tier 1",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.33
+    },
+    {
+      "id": "T1.F14.01",
+      "name": "All 21 room directories exist on disk",
+      "tier": "Tier 1",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.16
+    },
+    {
+      "id": "T1.F14.02",
+      "name": "All 71 room photos exist and are non-empty readable files",
+      "tier": "Tier 1",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 1.67
+    },
+    {
+      "id": "T1.F14.03",
+      "name": "P.207 MP4 video file exists on disk and is >1MB",
+      "tier": "Tier 1",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T1.F14.04",
+      "name": "All 95 gallery photos exist in Ảnh Khách Sạn/ and are readable",
+      "tier": "Tier 1",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.23
+    },
+    {
+      "id": "T1.F14.05",
+      "name": "URL percent-encoding mechanism for Vietnamese paths configured",
+      "tier": "Tier 1",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.06
+    },
+    {
+      "id": "T1.F15.01",
+      "name": "Autonomous test runner script exists at tests/e2e_runner.py",
+      "tier": "Tier 1",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F15.02",
+      "name": "Formal test cases specification exists at tests/test_cases.json",
+      "tier": "Tier 1",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F15.03",
+      "name": "Test infrastructure documentation exists at TEST_INFRA.md",
+      "tier": "Tier 1",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T1.F15.04",
+      "name": "JSON execution report capability supported in runner",
+      "tier": "Tier 1",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T1.F15.05",
+      "name": "Ephemeral local HTTP server initialized for live asset resolution",
+      "tier": "Tier 1",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F01.01",
+      "name": "Contrast ratio for primary text exceeds WCAG AAA (>7:1)",
+      "tier": "Tier 2",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F01.02",
+      "name": "Contrast ratio for muted body text exceeds WCAG AA (>4.5:1)",
+      "tier": "Tier 2",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F01.03",
+      "name": "Global design tokens scoped inside :root pseudo-class",
+      "tier": "Tier 2",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F01.04",
+      "name": "Fallback generic font families (serif, sans-serif) declared in CSS",
+      "tier": "Tier 2",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F01.05",
+      "name": "Editorial letter-spacing rules applied to titles and buttons",
+      "tier": "Tier 2",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F02.01",
+      "name": "Strict zero <svg> tags present in index.html",
+      "tier": "Tier 2",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.11
+    },
+    {
+      "id": "T2.F02.02",
+      "name": "Zero icon font-family declarations in CSS",
+      "tier": "Tier 2",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.05
+    },
+    {
+      "id": "T2.F02.03",
+      "name": "Zero emoji icons in HTML or data catalog",
+      "tier": "Tier 2",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.2
+    },
+    {
+      "id": "T2.F02.04",
+      "name": "All button elements contain purely text labels without glyph art",
+      "tier": "Tier 2",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.07
+    },
+    {
+      "id": "T2.F02.05",
+      "name": "Amenities section renders zero <i> icon tags or icon spans",
+      "tier": "Tier 2",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.06
+    },
+    {
+      "id": "T2.F03.01",
+      "name": "All 21 room keys conform to strict P.001 - P.304 format",
+      "tier": "Tier 2",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.16
+    },
+    {
+      "id": "T2.F03.02",
+      "name": "Room keys map accurately to vertical floor levels 0-3",
+      "tier": "Tier 2",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T2.F03.03",
+      "name": "Gallery contains exactly 95 authentic hotel archive images",
+      "tier": "Tier 2",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T2.F03.04",
+      "name": "Every room folder contains at least 3 high-res photos",
+      "tier": "Tier 2",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.53
+    },
+    {
+      "id": "T2.F03.05",
+      "name": "Room P.207 video tour clip file correctly located",
+      "tier": "Tier 2",
+      "feature": "F03",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F04.01",
+      "name": "Header brand name Hotel Hoa Nắng rendered prominently",
+      "tier": "Tier 2",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F04.02",
+      "name": "Document <title> tag present in HTML head",
+      "tier": "Tier 2",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T2.F04.03",
+      "name": "Document charset declared as UTF-8 in HTML head",
+      "tier": "Tier 2",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T2.F04.04",
+      "name": "Header navigation anchors point to internal section targets",
+      "tier": "Tier 2",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F04.05",
+      "name": "Footer landmark contains verified property location",
+      "tier": "Tier 2",
+      "feature": "F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T2.F05.01",
+      "name": "Category 1 Balcony Suites boundary contains exactly 4 rooms",
+      "tier": "Tier 2",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F05.02",
+      "name": "Category 2 Deluxe King boundary contains exactly 6 rooms",
+      "tier": "Tier 2",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F05.03",
+      "name": "Category 3 Superior Double & Twin boundary contains 7 rooms",
+      "tier": "Tier 2",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F05.04",
+      "name": "Category 4 Ground Level boundary contains exactly 4 rooms",
+      "tier": "Tier 2",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F05.05",
+      "name": "Category partition invariant: 4 + 6 + 7 + 4 = 21 rooms total",
+      "tier": "Tier 2",
+      "feature": "F05",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F06.01",
+      "name": "Room photo count reflow (3 photos in P.001 vs 4 in P.002)",
+      "tier": "Tier 2",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.05
+    },
+    {
+      "id": "T2.F06.02",
+      "name": "Escape key listener configured to dismiss active modals",
+      "tier": "Tier 2",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.04
+    },
+    {
+      "id": "T2.F06.03",
+      "name": "Modal backdrop overlay structure present in layout",
+      "tier": "Tier 2",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.24
+    },
+    {
+      "id": "T2.F06.04",
+      "name": "Modal scroll locking styles configured in CSS",
+      "tier": "Tier 2",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F06.05",
+      "name": "Room key selection updates active suite state",
+      "tier": "Tier 2",
+      "feature": "F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F07.01",
+      "name": "P.207 video file size boundary exceeds 1MB",
+      "tier": "Tier 2",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F07.02",
+      "name": "Video element includes playsinline for iOS Safari compliance",
+      "tier": "Tier 2",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F07.03",
+      "name": "Video audio status toggle configured",
+      "tier": "Tier 2",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F07.04",
+      "name": "Video playback state toggle configured",
+      "tier": "Tier 2",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.23
+    },
+    {
+      "id": "T2.F07.05",
+      "name": "P.207 video fallback poster image available",
+      "tier": "Tier 2",
+      "feature": "F07",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T2.F08.01",
+      "name": "Gallery archive container renders in DOM",
+      "tier": "Tier 2",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.09
+    },
+    {
+      "id": "T2.F08.02",
+      "name": "Masonry column/grid CSS layout rules defined",
+      "tier": "Tier 2",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F08.03",
+      "name": "Gallery filter tab event handlers configured",
+      "tier": "Tier 2",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.24
+    },
+    {
+      "id": "T2.F08.04",
+      "name": "Subtle image hover zoom transition defined in CSS",
+      "tier": "Tier 2",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F08.05",
+      "name": "Full gallery archive contains exactly 95 authentic files",
+      "tier": "Tier 2",
+      "feature": "F08",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.13
+    },
+    {
+      "id": "T2.F09.01",
+      "name": "Lightbox circular boundary wrap: index 0 [ PREV ] -> index 94",
+      "tier": "Tier 2",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F09.02",
+      "name": "Lightbox circular boundary wrap: index 94 [ NEXT ] -> index 0",
+      "tier": "Tier 2",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F09.03",
+      "name": "Keyboard Arrow keys trigger previous / next image navigation",
+      "tier": "Tier 2",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.03
+    },
+    {
+      "id": "T2.F09.04",
+      "name": "Lightbox counter format displays current position",
+      "tier": "Tier 2",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.25
+    },
+    {
+      "id": "T2.F09.05",
+      "name": "Lightbox close dismisses viewer and restores backdrop",
+      "tier": "Tier 2",
+      "feature": "F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.24
+    },
+    {
+      "id": "T2.F10.01",
+      "name": "Factual Amenity 1: Air Conditioning explicitly listed",
+      "tier": "Tier 2",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.35
+    },
+    {
+      "id": "T2.F10.02",
+      "name": "Factual Amenity 2: High-Speed Fiber Wi-Fi explicitly listed",
+      "tier": "Tier 2",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.36
+    },
+    {
+      "id": "T2.F10.03",
+      "name": "Factual Amenity 3: En-Suite Bathroom explicitly listed",
+      "tier": "Tier 2",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.36
+    },
+    {
+      "id": "T2.F10.04",
+      "name": "Factual Amenity 4: Passenger Elevator explicitly listed",
+      "tier": "Tier 2",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.35
+    },
+    {
+      "id": "T2.F10.05",
+      "name": "Factual Amenities 5-8: Balconies, 24/7 Desk, Parking listed",
+      "tier": "Tier 2",
+      "feature": "F10",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.35
+    },
+    {
+      "id": "T2.F11.01",
+      "name": "Minimum 1-night stay boundary handling configured",
+      "tier": "Tier 2",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.25
+    },
+    {
+      "id": "T2.F11.02",
+      "name": "Check-out earlier than or equal to check-in rejected with rule",
+      "tier": "Tier 2",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.25
+    },
+    {
+      "id": "T2.F11.03",
+      "name": "Guest name with Vietnamese diacritics and hyphens supported",
+      "tier": "Tier 2",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.1
+    },
+    {
+      "id": "T2.F11.04",
+      "name": "Empty or single-character guest name rejected by validator",
+      "tier": "Tier 2",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.47
+    },
+    {
+      "id": "T2.F11.05",
+      "name": "Malformed phone/email input rejected with validation constraint",
+      "tier": "Tier 2",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.07
+    },
+    {
+      "id": "T2.F12.01",
+      "name": "Telephone hotline link format verified (tel:090...)",
+      "tier": "Tier 2",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F12.02",
+      "name": "Official email address configured with valid domain",
+      "tier": "Tier 2",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.36
+    },
+    {
+      "id": "T2.F12.03",
+      "name": "Direct instant messaging channel (Zalo / WhatsApp) configured",
+      "tier": "Tier 2",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.37
+    },
+    {
+      "id": "T2.F12.04",
+      "name": "Address contains Phường B'Lao, TP. Bảo Lộc, Tỉnh Lâm Đồng",
+      "tier": "Tier 2",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F12.05",
+      "name": "Location map directions channel accessible",
+      "tier": "Tier 2",
+      "feature": "F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.48
+    },
+    {
+      "id": "T2.F13.01",
+      "name": "Ultra-narrow viewport 320px rendering without horizontal scroll",
+      "tier": "Tier 2",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F13.02",
+      "name": "Mobile viewport 375px media query rules configured in CSS",
+      "tier": "Tier 2",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T2.F13.03",
+      "name": "Tablet viewport 768px media query rules configured in CSS",
+      "tier": "Tier 2",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T2.F13.04",
+      "name": "Desktop 1440px max-width container bounds configured in CSS",
+      "tier": "Tier 2",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F13.05",
+      "name": "Ultra-wide 2560px 4K canvas centered with auto margins",
+      "tier": "Tier 2",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F14.01",
+      "name": "Vietnamese diacritic path percent-encoding round-trip fidelity",
+      "tier": "Tier 2",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.02
+    },
+    {
+      "id": "T2.F14.02",
+      "name": "Filenames with whitespace correctly encode spaces to %20",
+      "tier": "Tier 2",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F14.03",
+      "name": "All 71 room photos have non-zero file sizes on disk",
+      "tier": "Tier 2",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.66
+    },
+    {
+      "id": "T2.F14.04",
+      "name": "All 95 gallery photos have non-zero file sizes on disk",
+      "tier": "Tier 2",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.53
+    },
+    {
+      "id": "T2.F14.05",
+      "name": "P.207 video tour clip size exceeds 5MB HD benchmark",
+      "tier": "Tier 2",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F15.01",
+      "name": "Standalone Python 3.8+ execution without pip dependencies",
+      "tier": "Tier 2",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F15.02",
+      "name": "Ephemeral HTTP server binds to dynamically assigned port",
+      "tier": "Tier 2",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T2.F15.03",
+      "name": "JSON test definitions schema validation passes",
+      "tier": "Tier 2",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.15
+    },
+    {
+      "id": "T2.F15.04",
+      "name": "TEST_INFRA.md specification size exceeds 1KB documentation threshold",
+      "tier": "Tier 2",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.01
+    },
+    {
+      "id": "T2.F15.05",
+      "name": "High-performance test suite executes within <5 seconds limit",
+      "tier": "Tier 2",
+      "feature": "F15",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T3.01",
+      "name": "Category × Room Key Combinations (21 pairs validated)",
+      "tier": "Tier 3",
+      "feature": "F05/F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.85
+    },
+    {
+      "id": "T3.02",
+      "name": "Gallery Filter × Lightbox Indexing (95 assets validated)",
+      "tier": "Tier 3",
+      "feature": "F08/F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.56
+    },
+    {
+      "id": "T3.03",
+      "name": "Inquiry Form Permutations (36 stay × guest × category pairs)",
+      "tier": "Tier 3",
+      "feature": "F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T3.04",
+      "name": "Responsive Viewport × Active Modal Dialogs (12 states)",
+      "tier": "Tier 3",
+      "feature": "F13/F06",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T4.01",
+      "name": "Journey 1: The Luxury Balcony Suite Explorer (Hero -> P.207 Video -> Inquire)",
+      "tier": "Tier 4",
+      "feature": "F05/F06/F07/F11",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.18
+    },
+    {
+      "id": "T4.02",
+      "name": "Journey 2: The Architectural Gallery Connoisseur (Filter -> Lightbox -> Cycle)",
+      "tier": "Tier 4",
+      "feature": "F08/F09",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.63
+    },
+    {
+      "id": "T4.03",
+      "name": "Journey 3: The Direct Booking Traveler (Reserve CTA -> Form Submit -> Summary)",
+      "tier": "Tier 4",
+      "feature": "F04/F11/F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.54
+    },
+    {
+      "id": "T4.04",
+      "name": "Journey 4: The Ground Level Accessible Guest (Step-Free -> Amenities -> Call)",
+      "tier": "Tier 4",
+      "feature": "F05/F10/F12",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.38
+    },
+    {
+      "id": "T5.01",
+      "name": "Zero SVG tags (<svg) across HTML/CSS/JS (Zero-Icon Mandate)",
+      "tier": "Tier 5",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.12
+    },
+    {
+      "id": "T5.02",
+      "name": "Zero icon class tokens (fa-, lucide, heroicon, material-icons)",
+      "tier": "Tier 5",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 7.16
+    },
+    {
+      "id": "T5.03",
+      "name": "Zero font-icon stylesheet imports or CDN links",
+      "tier": "Tier 5",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 14.01
+    },
+    {
+      "id": "T5.04",
+      "name": "Zero Unicode Emoji codepoints across all source code",
+      "tier": "Tier 5",
+      "feature": "F02",
+      "passed": true,
+      "error": null,
+      "duration_ms": 4.74
+    },
+    {
+      "id": "T5.05",
+      "name": "Zero fabricated review stars or fake rating scores",
+      "tier": "Tier 5",
+      "feature": "F02/F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 12.38
+    },
+    {
+      "id": "T5.06",
+      "name": "Zero simulated terminal/bash command prompts in UI",
+      "tier": "Tier 5",
+      "feature": "F02/F04",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.63
+    },
+    {
+      "id": "T5.07",
+      "name": "100% on-disk asset verification (21 rooms, 71 photos, 1 video, 95 gallery = 167 assets)",
+      "tier": "Tier 5",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 1.25
+    },
+    {
+      "id": "T5.08",
+      "name": "100% HTTP 200 resolution over ephemeral server with percent-encoded paths",
+      "tier": "Tier 5",
+      "feature": "F14",
+      "passed": true,
+      "error": null,
+      "duration_ms": 19.12
+    },
+    {
+      "id": "T5.09",
+      "name": "Global CSS box-sizing reset and horizontal overflow-x containment",
+      "tier": "Tier 5",
+      "feature": "F13",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.0
+    },
+    {
+      "id": "T5.10",
+      "name": "Strict editorial luxury palette compliance in CSS rules",
+      "tier": "Tier 5",
+      "feature": "F01",
+      "passed": true,
+      "error": null,
+      "duration_ms": 0.3
+    }
+  ]
+}

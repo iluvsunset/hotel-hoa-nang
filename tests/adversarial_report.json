@@ -1,0 +1,25 @@
+{
+  "passCount": 11,
+  "failCount": 0,
+  "findings": [
+    {
+      "id": "BUG-01",
+      "severity": "CRITICAL",
+      "title": "Bilingual Engine Unscoped QuerySelector Crash (app.js:617)",
+      "description": "Line 617 in app.js uses $$('.story-specs-table .spec-entry') without scoping to #story. It matches 8 elements (4 in #story and 4 in #location) while specPairs only has 4 entries. At index 4, specPairs[4][0] throws 'TypeError: Cannot read properties of undefined (reading 0)', crashing setLanguage on page load and blocking all translations.",
+      "reproduction": "Run createInstance(false) or load index.html in any standard browser and observe console error on DOMContentLoaded."
+    },
+    {
+      "id": "BUG-02",
+      "severity": "MEDIUM",
+      "title": "Video Audio Toggle Button Text / Action Inversion",
+      "description": "When video is muted (silent), button text displays '[ Tắt Âm ]' (Tắt Âm / Mute) instead of action to Unmute/Bật Âm Thanh. When video is unmuted, button displays '[ Bật Âm Thanh ]' / '[ Sound On ]'."
+    },
+    {
+      "id": "BUG-03",
+      "severity": "LOW",
+      "title": "Modal Drawer Incomplete Translation On Mid-Session Language Switch",
+      "description": "When switching language while Room Explorer Modal is open, the following elements are not dynamically refreshed: modalCategoryTitle remained VI, modalCategoryLevel remained VI, modalRoomKeysStrip 'All' tab remained VI, modalGalleryPhotoCount remained VI"
+    }
+  ]
+}
