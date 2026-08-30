@@ -168,7 +168,7 @@
           suitePref: "Hạng Phòng / Mức Giá *",
           guests: "Số Lượng Khách",
           fullName: "Họ Và Tên Quý Khách *",
-          contact: "Số Điện Thoại Hoặc Zalo *",
+          contact: "Số Điện Thoại Hoặc Email *",
           notes: "Yêu Cầu Đặc Biệt & Giờ Đến Dự Kiến",
           submit: "Gửi Yêu Cầu Đặt Phòng"
         },
@@ -196,7 +196,7 @@
           checkOut: "Ngày trả phòng phải sau ngày nhận phòng ít nhất 1 đêm",
           suitePref: "Vui lòng chọn hạng phòng mong muốn",
           fullName: "Vui lòng nhập họ và tên của quý khách",
-          contact: "Vui lòng nhập số điện thoại hoặc Zalo hợp lệ"
+          contact: "Vui lòng nhập số điện thoại hoặc email hợp lệ"
         },
         summary: {
           refPrefix: "MÃ YÊU CẦU // ",
@@ -410,7 +410,7 @@
           suitePref: "Suite & Rate Preference *",
           guests: "Guest Count",
           fullName: "Your Full Name *",
-          contact: "Phone Number or Zalo *",
+          contact: "Phone Number or Email *",
           notes: "Special Inquiries & Arrival Time",
           submit: "Transmit Reservation Inquiry"
         },
@@ -438,7 +438,7 @@
           checkOut: "Check-out must be after check-in",
           suitePref: "Please choose a suite preference",
           fullName: "Please provide your full name",
-          contact: "Valid phone number or Zalo required"
+          contact: "Valid phone number or email required"
         },
         summary: {
           refPrefix: "Reference // ",
@@ -645,10 +645,21 @@
     const accIntro = $("#accIntro") || $("#accommodations .section-intro");
     if (accIntro) accIntro.textContent = dict.accommodations.intro;
 
+    // Hero Image Alt
+    const heroImg = $(".hero-backdrop img");
+    if (heroImg) heroImg.alt = (lang === "en" ? "Panoramic architecture of Hotel Hoa Nắng in Bảo Lộc" : "Toàn cảnh kiến trúc Khách Sạn Hoa Nắng tại Bảo Lộc Lâm Đồng");
+
+    // Story Image Alt
+    const storyImg = $(".story-image-main");
+    if (storyImg) storyImg.alt = (lang === "en" ? "Illuminated evening entrance and lobby of Hotel Hoa Nắng" : "Lối vào và sảnh đón tiếp Khách Sạn Hoa Nắng");
+
     $$(".suite-card").forEach(function (card) {
       const catId = card.getAttribute("data-category");
       const cData = dict.accommodations.categories[catId];
       if (cData) {
+        const sImg = card.querySelector(".suite-image");
+        if (sImg) sImg.alt = cData.title + (lang === "en" ? " at Hotel Hoa Nắng" : " tại Khách Sạn Hoa Nắng");
+
         const badge = card.querySelector(".suite-badge-tag");
         if (badge) badge.textContent = cData.badge;
 
@@ -700,13 +711,19 @@
     $$(".curated-card").forEach(function (card) {
       const tagEl = card.querySelector(".curated-tag");
       const titleEl = card.querySelector(".curated-title");
+      const gImg = card.querySelector("img");
       const tagVi = card.getAttribute("data-tag-vi");
       const tagEn = card.getAttribute("data-tag-en");
       const titleVi = card.getAttribute("data-title-vi");
       const titleEn = card.getAttribute("data-title-en");
       if (tagEl) tagEl.textContent = (lang === "vi" ? tagVi : tagEn) || tagEl.textContent;
       if (titleEl) titleEl.textContent = (lang === "vi" ? titleVi : titleEn) || titleEl.textContent;
+      if (gImg) gImg.alt = (lang === "vi" ? titleVi : titleEn) || gImg.alt;
     });
+
+    // Location Image Alt
+    const locImg = $("#location .story-image-main");
+    if (locImg) locImg.alt = (lang === "en" ? "Scenic mountain landscape surrounding Hotel Hoa Nắng in Bảo Lộc" : "Khung cảnh cao nguyên Bảo Lộc xung quanh Khách Sạn Hoa Nắng");
 
     // Amenities Section
     const amenEyebrow = $("#amenities .eyebrow");

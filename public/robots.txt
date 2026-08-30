@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
 
+# Disallow system and build resources
+Disallow: /node_modules/
+Disallow: /tests/
+Disallow: /.git/
+
+# Sitemaps
 Sitemap: https://hotelhoanang.com/sitemap.xml

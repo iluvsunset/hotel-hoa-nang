@@ -3,67 +3,85 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   
-  <!-- Homepage -->
+  <!-- Main Homepage -->
   <url>
     <loc>https://hotelhoanang.com/</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/" />
     <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://hotelhoanang.com/" />
     <image:image>
-      <image:loc>https://hotelhoanang.com/Ảnh%20Khách%20Sạn/z5987786268678_9a4b5460e6b239a79c76d0719ca27a68.jpg</image:loc>
-      <image:title>Khách Sạn Hoa Nắng Bảo Lộc Mặt Tiền Sang Trọng</image:title>
-      <image:caption>Khách sạn nghỉ dưỡng cao cấp tại Bảo Lộc Lâm Đồng</image:caption>
+      <image:loc>https://hotelhoanang.com/%E1%BA%A2nh%20Kh%C3%A1ch%20S%E1%BA%A1n/z4873228475021_ecab45cece11e0939eca37545aafff11.jpg</image:loc>
+      <image:title>Khách Sạn Hoa Nắng — Toàn Cảnh Kiến Trúc Bảo Lộc</image:title>
+      <image:caption>Khách sạn nghỉ dưỡng cao cấp tại Phường B'Lao, TP. Bảo Lộc, Lâm Đồng</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://hotelhoanang.com/P.207/z7824769766134_b990789e47ada06114ac12048cd0a402.jpg</image:loc>
+      <image:title>Phòng Đôi Ban Công Cao Cấp P.207</image:title>
+      <image:caption>Phòng đôi 2 giường 1m6 có ban công riêng nhìn ra đồi núi Bảo Lộc</image:caption>
     </image:image>
   </url>
 
-  <!-- Rooms & Suites Section -->
+  <!-- Accommodations & Rates Section -->
   <url>
-    <loc>https://hotelhoanang.com/#rooms</loc>
-    <lastmod>2026-08-25</lastmod>
+    <loc>https://hotelhoanang.com/#accommodations</loc>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#accommodations" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#accommodations" />
   </url>
 
-  <!-- Amenities & Buffet Breakfast Section -->
-  <url>
-    <loc>https://hotelhoanang.com/#amenities</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- House Rules & Stay Policies -->
-  <url>
-    <loc>https://hotelhoanang.com/#policies</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Photo Gallery -->
+  <!-- Curated Photography Gallery -->
   <url>
     <loc>https://hotelhoanang.com/#gallery</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#gallery" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#gallery" />
   </url>
 
-  <!-- Direct Booking -->
+  <!-- Hotel Amenities -->
   <url>
-    <loc>https://hotelhoanang.com/#booking</loc>
-    <lastmod>2026-08-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://hotelhoanang.com/#amenities</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#amenities" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#amenities" />
   </url>
 
-  <!-- Location & Google Maps -->
+  <!-- Architecture & Story -->
+  <url>
+    <loc>https://hotelhoanang.com/#story</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#story" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#story" />
+  </url>
+
+  <!-- Location & Climate -->
   <url>
     <loc>https://hotelhoanang.com/#location</loc>
-    <lastmod>2026-08-25</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#location" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#location" />
+  </url>
+
+  <!-- Direct Reservations Inquiry -->
+  <url>
+    <loc>https://hotelhoanang.com/#inquiry</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://hotelhoanang.com/#inquiry" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://hotelhoanang.com/?lang=en#inquiry" />
   </url>
 
 </urlset>
