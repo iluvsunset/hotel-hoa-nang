@@ -1041,7 +1041,7 @@
       if (categoryId === "phong-doi-ban-cong-dlx") {
         videoStage.style.display = "flex";
         if (videoPlayer) {
-          videoPlayer.src = "P.207/clip%20quay%20ph%C3%B2ng%20c%C3%B3%20ban%20c%C3%B4ng.mp4";
+          videoPlayer.src = "P.207/p207-balcony-tour.mp4";
           videoPlayer.load();
         }
       } else {
@@ -1087,7 +1087,7 @@
       if (roomKey === "P.207") {
         videoStage.style.display = "flex";
         if (videoPlayer) {
-          videoPlayer.src = "P.207/clip%20quay%20ph%C3%B2ng%20c%C3%B3%20ban%20c%C3%B4ng.mp4";
+          videoPlayer.src = "P.207/p207-balcony-tour.mp4";
           videoPlayer.load();
         }
       } else {
