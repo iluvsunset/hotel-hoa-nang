@@ -934,8 +934,15 @@
     const modalBackdrop = $("#roomExplorerModal");
     if (modalBackdrop) {
       modalBackdrop.addEventListener("click", function (e) {
-        if (e.target === this) closeModal();
+        if (!e.target.closest(".modal-drawer")) {
+          closeModal();
+        }
       });
+      modalBackdrop.addEventListener("touchstart", function (e) {
+        if (!e.target.closest(".modal-drawer")) {
+          closeModal();
+        }
+      }, { passive: true });
     }
 
     document.addEventListener("keydown", function (e) {
