@@ -35,7 +35,7 @@
       hero: {
         eyebrow: "Tĩnh Lặng & Ánh Sáng Tự Nhiên",
         title: "Khách Sạn Hoa Nắng",
-        subtitle: "Không gian nghỉ dưỡng thanh tịnh tại TP. Bảo Lộc. Phòng nghỉ ngập tràn ánh nắng, trang bị máy lạnh, thang máy và ban công nhìn ra núi đồi.",
+        subtitle: "Không gian nghỉ ngơi yên bình ngập tràn ánh nắng và ban công hướng núi tại Bảo Lộc.",
         exploreBtn: "Xem Bảng Giá & Phòng",
         inquireBtn: "Zalo: 0899 668 639",
         stats: {
@@ -277,7 +277,7 @@
       hero: {
         eyebrow: "Quiet Luxury & Natural Light",
         title: "Hotel Hoa Nắng",
-        subtitle: "Serene highland hospitality in Bảo Lộc city. Sunlit accommodations equipped with inverter AC, elevator access, and mountain-facing balconies.",
+        subtitle: "Peaceful highland stays in Bảo Lộc with sunlit rooms, elevator access, and mountain-view balconies.",
         exploreBtn: "View Rates & Rooms",
         inquireBtn: "Zalo: 0899 668 639",
         stats: {
