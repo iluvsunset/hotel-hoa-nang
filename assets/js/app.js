@@ -533,10 +533,10 @@
 
     const navItems = $$(".nav-links .nav-item");
     if (navItems.length >= 5) {
-      navItems[0].textContent = dict.nav.accommodations;
-      navItems[1].textContent = dict.nav.gallery;
-      navItems[2].textContent = dict.nav.amenities;
-      navItems[3].textContent = dict.nav.story;
+      navItems[0].textContent = dict.nav.story;
+      navItems[1].textContent = dict.nav.accommodations;
+      navItems[2].textContent = dict.nav.gallery;
+      navItems[3].textContent = dict.nav.amenities;
       navItems[4].textContent = dict.nav.location;
     }
 
@@ -551,10 +551,10 @@
     const mobileItems = $$(".mobile-nav-links .mobile-nav-item");
     if (mobileItems.length >= 5) {
       const mTexts = [
+        dict.nav.story,
         dict.nav.accommodations,
         dict.nav.gallery,
         dict.nav.amenities,
-        dict.nav.story,
         dict.nav.location
       ];
       mobileItems.forEach(function (item, i) {
@@ -775,11 +775,18 @@
     }
 
     // Form Labels, Select Options & Placeholders
-    const lblCheckIn = $("label[for='inquiryCheckIn']");
+    const lblCheckIn = $("#lblCheckIn") || $("label[for='inquiryCheckIn']");
     if (lblCheckIn) lblCheckIn.textContent = dict.inquiry.labels.checkIn;
 
-    const lblCheckOut = $("label[for='inquiryCheckOut']");
+    const lblCheckOut = $("#lblCheckOut") || $("label[for='inquiryCheckOut']");
     if (lblCheckOut) lblCheckOut.textContent = dict.inquiry.labels.checkOut;
+
+    const calApply = $("#calApplyBtn");
+    if (calApply) calApply.textContent = lang === "en" ? "Confirm Dates" : "Xác Nhận";
+
+    if (typeof window.refreshLuxuryCalendar === "function") {
+      window.refreshLuxuryCalendar();
+    }
 
     const lblRoomSelect = $("label[for='inquiryRoomSelect']");
     if (lblRoomSelect) lblRoomSelect.textContent = dict.inquiry.labels.suitePref;
@@ -1159,9 +1166,238 @@
   }
 
   // =========================================================================
+  // CUSTOM LUXURY DATE RANGE CALENDAR
+  // =========================================================================
+  function initCustomLuxuryCalendar() {
+    const checkInInput = $("#inquiryCheckIn");
+    const checkOutInput = $("#inquiryCheckOut");
+    const checkInDisplay = $("#checkInDateDisplay");
+    const checkOutDisplay = $("#checkOutDateDisplay");
+    const checkInTrigger = $("#checkInFieldTrigger");
+    const checkOutTrigger = $("#checkOutFieldTrigger");
+    const popover = $("#luxuryCalendarPopover");
+    const monthYearTitle = $("#calMonthYearTitle");
+    const prevMonthBtn = $("#calPrevMonthBtn");
+    const nextMonthBtn = $("#calNextMonthBtn");
+    const daysGrid = $("#calDaysGrid");
+    const weekdaysRow = $("#calWeekdaysRow");
+    const summaryDates = $("#calSummaryDates");
+    const summaryNights = $("#calSummaryNights");
+    const applyBtn = $("#calApplyBtn");
+
+    if (!checkInInput || !checkOutInput || !popover) return;
+
+    // Calendar state
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    let selCheckIn = new Date(today);
+    let selCheckOut = new Date(today);
+    selCheckOut.setDate(selCheckOut.getDate() + 1);
+
+    let viewYear = selCheckIn.getFullYear();
+    let viewMonth = selCheckIn.getMonth(); // 0-indexed
+    let selectionStep = "done"; // "checkin", "checkout", "done"
+
+    const pad = function (n) { return n < 10 ? "0" + n : "" + n; };
+    const toIso = function (d) { return d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate()); };
+    const toDisplay = function (d) { return pad(d.getDate()) + "/" + pad(d.getMonth() + 1) + "/" + d.getFullYear(); };
+
+    const updateDOM = function () {
+      if (selCheckIn) {
+        checkInInput.value = toIso(selCheckIn);
+        if (checkInDisplay) checkInDisplay.textContent = toDisplay(selCheckIn);
+      }
+      if (selCheckOut) {
+        checkOutInput.value = toIso(selCheckOut);
+        if (checkOutDisplay) checkOutDisplay.textContent = toDisplay(selCheckOut);
+      } else {
+        checkOutInput.value = "";
+        if (checkOutDisplay) checkOutDisplay.textContent = "--/--/----";
+      }
+
+      if (summaryDates) {
+        const inStr = selCheckIn ? toDisplay(selCheckIn) : "--";
+        const outStr = selCheckOut ? toDisplay(selCheckOut) : "--";
+        summaryDates.innerHTML = inStr + " &rarr; " + outStr;
+      }
+
+      if (summaryNights) {
+        if (selCheckIn && selCheckOut) {
+          const diffTime = Math.abs(selCheckOut - selCheckIn);
+          const diffNights = Math.round(diffTime / (1000 * 60 * 60 * 24));
+          const isEn = APP_STATE.currentLang === "en";
+          summaryNights.textContent = "(" + diffNights + " " + (isEn ? (diffNights > 1 ? "Nights" : "Night") : "Đêm") + ")";
+        } else {
+          summaryNights.textContent = "";
+        }
+      }
+    };
+
+    const renderCalendar = function () {
+      const isEn = APP_STATE.currentLang === "en";
+      const monthNamesVi = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+      const monthNamesEn = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+      if (monthYearTitle) {
+        monthYearTitle.textContent = (isEn ? monthNamesEn[viewMonth] : monthNamesVi[viewMonth]) + ", " + viewYear;
+      }
+
+      if (weekdaysRow) {
+        weekdaysRow.innerHTML = isEn
+          ? "<span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span>"
+          : "<span>T2</span><span>T3</span><span>T4</span><span>T5</span><span>T6</span><span>T7</span><span>CN</span>";
+      }
+
+      if (!daysGrid) return;
+      daysGrid.innerHTML = "";
+
+      const firstDayOfMonth = new Date(viewYear, viewMonth, 1);
+      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
+      
+      // Calculate Monday-based start offset (0 = Mon ... 6 = Sun)
+      let startOffset = firstDayOfMonth.getDay() - 1;
+      if (startOffset === -1) startOffset = 6;
+
+      for (let i = 0; i < startOffset; i++) {
+        const emptyCell = document.createElement("div");
+        emptyCell.className = "cal-day-cell disabled";
+        emptyCell.innerHTML = "";
+        daysGrid.appendChild(emptyCell);
+      }
+
+      for (let day = 1; day <= daysInMonth; day++) {
+        const cellDate = new Date(viewYear, viewMonth, day);
+        cellDate.setHours(0, 0, 0, 0);
+
+        const cell = document.createElement("div");
+        cell.className = "cal-day-cell";
+        cell.textContent = day;
+
+        if (cellDate < today) {
+          cell.classList.add("disabled");
+        } else {
+          if (cellDate.getTime() === today.getTime()) {
+            cell.classList.add("today");
+          }
+
+          if (selCheckIn && cellDate.getTime() === selCheckIn.getTime()) {
+            cell.classList.add("selected-checkin");
+          } else if (selCheckOut && cellDate.getTime() === selCheckOut.getTime()) {
+            cell.classList.add("selected-checkout");
+          } else if (selCheckIn && selCheckOut && cellDate > selCheckIn && cellDate < selCheckOut) {
+            cell.classList.add("in-range");
+          }
+
+          cell.addEventListener("click", function (e) {
+            e.stopPropagation();
+            if (selectionStep === "checkout" && selCheckIn) {
+              if (cellDate > selCheckIn) {
+                selCheckOut = new Date(cellDate);
+                selectionStep = "done";
+                updateDOM();
+                renderCalendar();
+                setTimeout(function () { popover.classList.remove("active"); }, 200);
+              } else {
+                selCheckIn = new Date(cellDate);
+                selCheckOut = null;
+                selectionStep = "checkout";
+                updateDOM();
+                renderCalendar();
+              }
+            } else {
+              selCheckIn = new Date(cellDate);
+              selCheckOut = null;
+              selectionStep = "checkout";
+              updateDOM();
+              renderCalendar();
+            }
+          });
+        }
+
+        daysGrid.appendChild(cell);
+      }
+    };
+
+    if (prevMonthBtn) {
+      prevMonthBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        viewMonth--;
+        if (viewMonth < 0) {
+          viewMonth = 11;
+          viewYear--;
+        }
+        renderCalendar();
+      });
+    }
+
+    if (nextMonthBtn) {
+      nextMonthBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        viewMonth++;
+        if (viewMonth > 11) {
+          viewMonth = 0;
+          viewYear++;
+        }
+        renderCalendar();
+      });
+    }
+
+    const openPopover = function () {
+      viewYear = selCheckIn ? selCheckIn.getFullYear() : today.getFullYear();
+      viewMonth = selCheckIn ? selCheckIn.getMonth() : today.getMonth();
+      renderCalendar();
+      popover.classList.add("active");
+    };
+
+    if (checkInTrigger) {
+      checkInTrigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        selectionStep = "checkin";
+        openPopover();
+      });
+    }
+
+    if (checkOutTrigger) {
+      checkOutTrigger.addEventListener("click", function (e) {
+        e.stopPropagation();
+        selectionStep = "checkout";
+        openPopover();
+      });
+    }
+
+    if (applyBtn) {
+      applyBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (!selCheckOut && selCheckIn) {
+          selCheckOut = new Date(selCheckIn);
+          selCheckOut.setDate(selCheckOut.getDate() + 1);
+          updateDOM();
+        }
+        popover.classList.remove("active");
+      });
+    }
+
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest("#luxuryDatePickerContainer")) {
+        popover.classList.remove("active");
+      }
+    });
+
+    window.refreshLuxuryCalendar = function () {
+      renderCalendar();
+      updateDOM();
+    };
+
+    updateDOM();
+    renderCalendar();
+  }
+
+  // =========================================================================
   // RESERVATION INQUIRY FORM
   // =========================================================================
   function initReservationForm() {
+    initCustomLuxuryCalendar();
     const form = $("#inquiryForm");
     if (!form) return;
 
@@ -1268,25 +1504,39 @@
       menuBtn.addEventListener("click", function () {
         const active = overlay.classList.toggle("active");
         this.setAttribute("aria-expanded", active ? "true" : "false");
+        if (active) {
+          document.body.classList.add("nav-locked");
+          menuBtn.textContent = APP_STATE.currentLang === "en" ? "CLOSE" : "ĐÓNG";
+        } else {
+          document.body.classList.remove("nav-locked");
+          menuBtn.textContent = "MENU";
+        }
       });
     }
 
     $$(".mobile-nav-close-trigger").forEach(function (el) {
       el.addEventListener("click", function () {
-        if (overlay) overlay.classList.remove("active");
+        if (overlay) {
+          overlay.classList.remove("active");
+          document.body.classList.remove("nav-locked");
+          if (menuBtn) {
+            menuBtn.setAttribute("aria-expanded", "false");
+            menuBtn.textContent = "MENU";
+          }
+        }
       });
     });
 
-    // Header scroll blur effect
+    // Header scroll auto-shrink Lotte-hotel style effect
     window.addEventListener("scroll", function () {
       const hdr = $("#mainHeader");
       if (!hdr) return;
-      if (window.scrollY > 40) {
+      if (window.scrollY > 20) {
         hdr.classList.add("scrolled");
       } else {
         hdr.classList.remove("scrolled");
       }
-    });
+    }, { passive: true });
 
     initAccommodationsExplorer();
     initReservationForm();

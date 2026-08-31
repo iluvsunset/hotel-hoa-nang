@@ -2,7 +2,7 @@
   "name": "hotel-hoa-nang",
   "version": "1.0.0",
   "private": true,
-  "description": "Hotel Hoa N\u1eafng \u2014 Quiet Luxury & Natural Sunlight",
+  "description": "Hotel Hoa Nắng — Quiet Luxury & Natural Sunlight",
   "scripts": {
     "dev": "vite --host --port 8080",
     "build": "vite build && cp -R P.* dist/ 2>/dev/null || true && cp -R \"Ảnh Khách Sạn\" dist/ 2>/dev/null || true && cp -R assets dist/ 2>/dev/null || true",
@@ -11,5 +11,8 @@
   },
   "devDependencies": {
     "vite": "^6.0.0"
+  },
+  "dependencies": {
+    "motion": "^13.1.1"
   }
 }
