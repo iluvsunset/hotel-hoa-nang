@@ -796,13 +796,6 @@ body.nav-locked {
   color: var(--c-alabaster);
 }
 
-@media (max-width: 768px) {
-  .hero-stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 1.0rem;
-  }
-}
-
 .story-section {
   background-color: var(--c-alabaster);
 }
@@ -2276,11 +2269,27 @@ input[type="date"]::-webkit-date-and-time-value {
 }
 
 /* =========================================================================
-   COMPREHENSIVE MOBILE & TOUCH OPTIMIZATION (< 768px & < 480px)
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVE OPTIMIZATION (< 1024px)
    ========================================================================= */
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
   :root {
     --header-height: 62px;
+  }
+
+  /* Prevent Horizontal Overflow Globally */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    position: relative;
+  }
+
+  .container, .container-editorial {
+    padding-left: 1.0rem;
+    padding-right: 1.0rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Prevent iOS Auto-Zoom on Form Focus */
@@ -2288,12 +2297,18 @@ input[type="date"]::-webkit-date-and-time-value {
     font-size: 16px !important;
     min-height: 48px;
     padding: 0.75rem 0.95rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   /* Header & Navigation */
   .header-editorial {
     height: 62px;
     background-color: var(--c-alabaster);
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
   }
 
   .mobile-nav-overlay {
@@ -2303,14 +2318,27 @@ input[type="date"]::-webkit-date-and-time-value {
     padding: 1.5rem 1.25rem 2.0rem !important;
     background-color: var(--c-alabaster);
     border-top: 1px solid var(--c-hairline);
+    box-sizing: border-box;
   }
 
   .nav-wrapper {
-    padding: 0 1.0rem;
+    padding: 0 0.75rem;
+    width: 100%;
+    max-width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .brand-identity {
+    min-width: 0;
+    flex-shrink: 1;
+    overflow: hidden;
   }
 
   .brand-name {
-    font-size: 1.15rem;
+    font-size: clamp(0.95rem, 3.2vw, 1.2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .brand-sub {
@@ -2318,7 +2346,8 @@ input[type="date"]::-webkit-date-and-time-value {
   }
 
   .nav-actions {
-    gap: 0.5rem;
+    gap: 0.35rem;
+    flex-shrink: 0;
   }
 
   .nav-reserve-btn {
@@ -2326,35 +2355,45 @@ input[type="date"]::-webkit-date-and-time-value {
   }
 
   .lang-segmented-toggle {
-    width: 76px;
+    width: 66px;
     padding: 2px;
+    flex-shrink: 0;
   }
 
   .lang-toggle-btn {
-    width: 34px;
+    width: 30px;
     height: 24px;
-    font-size: 0.65rem;
+    font-size: 0.625rem;
   }
 
-  /* Hero Section Mobile Full-Height & Natural Flow */
+  .menu-trigger {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    flex-shrink: 0;
+  }
+
+  /* Hero Section Mobile — Clean Full-Height Luxury Hero (No Dark Stats Bar) */
   .hero-stage {
-    min-height: auto;
+    min-height: calc(100vh - var(--header-height));
+    min-height: calc(100dvh - var(--header-height));
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: stretch;
-    padding-top: calc(var(--header-height) + 2.25rem);
-    padding-bottom: 0;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--header-height) + 1.5rem) 1.0rem 2.5rem;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-content {
     position: relative;
     z-index: 3;
     margin: 0 auto;
-    padding: 0 1.25rem 2.5rem;
+    padding: 0;
     width: 100%;
+    max-width: 520px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -2362,16 +2401,22 @@ input[type="date"]::-webkit-date-and-time-value {
     text-align: center;
   }
 
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.22em;
+    margin-bottom: 0.4rem;
+  }
+
   .hero-title {
-    font-size: clamp(2.1rem, 9vw, 2.85rem);
+    font-size: clamp(2.1rem, 9.0vw, 2.85rem);
     line-height: 1.12;
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
   }
 
   .hero-subtitle {
-    font-size: 0.95rem;
-    line-height: 1.55;
+    font-size: 0.92rem;
+    line-height: 1.5;
     margin-top: 0.5rem;
     margin-bottom: 1.75rem;
     max-width: 100%;
@@ -2381,8 +2426,7 @@ input[type="date"]::-webkit-date-and-time-value {
   .hero-actions {
     flex-direction: column;
     width: 100%;
-    gap: 0.85rem;
-    margin-bottom: 1.0rem;
+    gap: 0.75rem;
   }
 
   .hero-actions a {
@@ -2392,82 +2436,111 @@ input[type="date"]::-webkit-date-and-time-value {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 0.85rem 1.25rem;
+    padding: 0.85rem 1.0rem;
     font-size: 0.8125rem;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     box-sizing: border-box;
   }
 
+  /* Remove Dark Stats Box on Mobile for clean, unobstructed luxury hero */
   .hero-stats-bar {
-    position: relative !important;
-    bottom: auto !important;
-    left: auto !important;
-    width: 100% !important;
-    z-index: 4;
-    background-color: rgba(13, 13, 13, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 1px solid rgba(253, 251, 247, 0.15);
-    padding: 1.5rem 1.0rem;
-    margin-top: auto;
-    box-sizing: border-box;
-  }
-
-  .hero-stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem 1.0rem;
-    padding: 0;
-    margin: 0;
-  }
-
-  .stat-item .stat-label {
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
-  }
-
-  .stat-item .stat-value {
-    font-size: 1.05rem;
+    display: none !important;
   }
 
   /* Section Headings */
   .section-padding {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+    padding-top: 3.0rem;
+    padding-bottom: 3.0rem;
   }
 
   .section-title {
-    font-size: clamp(1.65rem, 6.5vw, 2.25rem);
+    font-size: clamp(1.6rem, 6.2vw, 2.15rem);
   }
 
   /* Story Grid Mobile */
   .story-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2.0rem;
+    width: 100%;
+  }
+
+  .story-image-main {
+    width: 100%;
+    aspect-ratio: 16/10;
+    object-fit: cover;
   }
 
   /* Accommodations Cards */
   .suites-grid {
     grid-template-columns: 1fr;
-    gap: 2.0rem;
+    gap: 1.75rem;
+    width: 100%;
+  }
+
+  .suite-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .suite-image-container {
+    aspect-ratio: 16/10;
   }
 
   .suite-body {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 1.0rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .suite-card-footer {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.65rem;
     align-items: stretch;
+    width: 100%;
   }
 
   .suite-card-footer .open-room-modal-btn,
   .suite-card-footer .select-category-inquire {
     width: 100%;
+    min-height: 46px;
     text-align: center;
     justify-content: center;
     padding: 0.75rem 1.0rem;
+    box-sizing: border-box;
+  }
+
+  /* Curated Showcase Grid */
+  .curated-showcase-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .curated-card-media {
+    aspect-ratio: 16/10;
+  }
+
+  /* Amenities Grid */
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.85rem;
+    width: 100%;
+  }
+
+  .amenity-card {
+    padding: 1.25rem 0.85rem;
+    box-sizing: border-box;
+  }
+
+  /* Location Section */
+  #location .story-grid {
+    grid-template-columns: 1fr;
+    gap: 2.0rem;
+    width: 100%;
+  }
+
+  #location .story-image-main {
+    aspect-ratio: 16/10;
   }
 
   /* Modal Drawer Mobile Optimization */
@@ -2506,15 +2579,79 @@ input[type="date"]::-webkit-date-and-time-value {
   .inquiry-wrapper-grid {
     grid-template-columns: 1fr;
     gap: 2.0rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .inquiry-info {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .ota-channels-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+  }
+
+  .ota-link-pill {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 0.65rem 1.0rem;
   }
 
   .inquiry-form-card {
-    padding: 1.5rem 1.25rem;
+    padding: 1.25rem 0.85rem;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .form-grid {
     grid-template-columns: 1fr;
     gap: 1.0rem;
+    width: 100%;
+  }
+
+  .form-full {
+    grid-column: span 1;
+  }
+
+  .date-inputs-dual-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    width: 100%;
+  }
+
+  .custom-date-input-box {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 48px;
+  }
+
+  .luxury-calendar-popover {
+    width: 100%;
+    max-width: calc(100vw - 2.5rem);
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 1.0rem 0.75rem;
+  }
+
+  .cal-weekdays-grid, .cal-days-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    width: 100%;
+  }
+
+  .cal-day-cell {
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    font-size: 0.78rem;
   }
 
   .inquiry-contact-links {
@@ -2523,19 +2660,41 @@ input[type="date"]::-webkit-date-and-time-value {
 
   /* Footer on Mobile */
   .footer-editorial {
-    padding-top: 3.5rem;
+    padding-top: 3.0rem;
     padding-bottom: 2.0rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   .footer-top-grid {
     grid-template-columns: 1fr;
-    gap: 2.0rem;
-    padding-bottom: 2.5rem;
+    gap: 1.75rem;
+    padding-bottom: 2.0rem;
+    width: 100%;
   }
 
   .footer-bottom-bar {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.95rem;
+  }
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .nav-wrapper {
+    padding: 0 0.5rem;
   }
 }
