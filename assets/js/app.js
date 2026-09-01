@@ -1497,7 +1497,27 @@
       });
     });
 
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle & Bulletproof iOS Scroll Lock
+    let lockedNavScrollY = 0;
+
+    function lockMobileNav() {
+      lockedNavScrollY = window.scrollY;
+      document.documentElement.classList.add("nav-locked");
+      document.body.classList.add("nav-locked");
+      document.body.style.top = `-${lockedNavScrollY}px`;
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    }
+
+    function unlockMobileNav() {
+      document.documentElement.classList.remove("nav-locked");
+      document.body.classList.remove("nav-locked");
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      window.scrollTo(0, lockedNavScrollY);
+    }
+
     const menuBtn = $("#menuToggleBtn");
     const overlay = $("#mobileNavOverlay");
     if (menuBtn && overlay) {
@@ -1505,10 +1525,10 @@
         const active = overlay.classList.toggle("active");
         this.setAttribute("aria-expanded", active ? "true" : "false");
         if (active) {
-          document.body.classList.add("nav-locked");
+          lockMobileNav();
           menuBtn.textContent = APP_STATE.currentLang === "en" ? "CLOSE" : "ĐÓNG";
         } else {
-          document.body.classList.remove("nav-locked");
+          unlockMobileNav();
           menuBtn.textContent = "MENU";
         }
       });
@@ -1516,9 +1536,9 @@
 
     $$(".mobile-nav-close-trigger").forEach(function (el) {
       el.addEventListener("click", function () {
-        if (overlay) {
+        if (overlay && overlay.classList.contains("active")) {
           overlay.classList.remove("active");
-          document.body.classList.remove("nav-locked");
+          unlockMobileNav();
           if (menuBtn) {
             menuBtn.setAttribute("aria-expanded", "false");
             menuBtn.textContent = "MENU";
